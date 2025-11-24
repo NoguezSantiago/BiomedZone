@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiomedZone - Innovación en Tecnología Biomédica y Prótesis</title>
+    <!-- Carga de Tailwind CSS para un diseño moderno y responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración para usar la fuente Inter -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc; /* Fondo muy claro para la estética limpia */
+        }
+        /* Clase para el degradado biomédico: Azul brillante a Cian tecnológico */
+        .bg-biomed-gradient {
+            background-image: linear-gradient(to right, #0077B6, #00B4D8);
+        }
+        /* Estilo para simular líneas y circuitos electrónicos */
+        .electronic-grid-bg {
+            background-image: radial-gradient(#00B4D8 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. HEADER (Encabezado Fijo) -->
+    <header id="header" class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo BiomedZone -->
+            <div class="flex items-center space-x-2">
+                <svg class="w-8 h-8 text-[#0077B6]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1v-3.25m-7.25 0a3 3 0 01-3-3V7a3 3 0 013-3h10a3 3 0 013 3v6a3 3 0 01-3 3H9.75z" />
+                </svg>
+                <h1 class="text-2xl font-extrabold text-[#0077B6]">Biomed<span class="text-[#00B4D8]">Zone</span></h1>
+            </div>
+
+            <!-- Menú de Navegación (Oculto en móvil) -->
+            <nav class="hidden md:flex space-x-6 text-gray-700 font-medium">
+                <a href="#inicio" class="nav-link hover:text-[#00B4D8] transition duration-300 rounded-lg p-2">Inicio</a>
+                <a href="#sobre-nosotros" class="nav-link hover:text-[#00B4D8] transition duration-300 rounded-lg p-2">Sobre Nosotros</a>
+                <a href="#servicios" class="nav-link hover:text-[#00B4D8] transition duration-300 rounded-lg p-2">Servicios</a>
+                <a href="#blog" class="nav-link hover:text-[#00B4D8] transition duration-300 rounded-lg p-2">Blog</a>
+                <a href="#galeria" class="nav-link hover:text-[#00B4D8] transition duration-300 rounded-lg p-2">Galería</a>
+                <a href="#contacto" class="nav-link hover:text-[#00B4D8] transition duration-300 rounded-lg p-2">Contacto</a>
+            </nav>
+
+            <!-- Botón de Acción -->
+            <a href="#contacto" class="hidden md:inline-block bg-biomed-gradient text-white font-semibold py-2 px-4 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+                Agenda una consulta
+            </a>
+
+            <!-- Botón de Menú Móvil -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pb-4 shadow-inner">
+            <a href="#inicio" class="nav-link block py-2 text-gray-700 hover:text-[#00B4D8]">Inicio</a>
+            <a href="#sobre-nosotros" class="nav-link block py-2 text-gray-700 hover:text-[#00B4D8]">Sobre Nosotros</a>
+            <a href="#servicios" class="nav-link block py-2 text-gray-700 hover:text-[#00B4D8]">Servicios</a>
+            <a href="#blog" class="nav-link block py-2 text-gray-700 hover:text-[#00B4D8]">Blog</a>
+            <a href="#galeria" class="nav-link block py-2 text-gray-700 hover:text-[#00B4D8]">Galería</a>
+            <a href="#contacto" class="nav-link block py-2 text-gray-700 hover:text-[#00B4D8]">Contacto</a>
+            <a href="#contacto" class="mt-4 block text-center bg-biomed-gradient text-white font-semibold py-2 rounded-xl">Agenda una consulta</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. PÁGINA INICIO (Home) -->
+        <section id="inicio" class="pt-20 pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Hero Principal -->
+            <div class="electronic-grid-bg bg-white p-6 md:p-12 rounded-3xl shadow-2xl flex flex-col lg:flex-row items-center justify-between">
+                <div class="lg:w-1/2 mb-8 lg:mb-0">
+                    <span class="text-sm font-semibold text-[#00B4D8] uppercase tracking-widest block mb-2">Innovación Biomédica y Accesibilidad</span>
+                    <h2 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                        Diseñando el futuro de las <span class="bg-clip-text text-transparent bg-biomed-gradient">Prótesis Inteligentes</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Conectamos ingeniería, bioelectrónica y ciencia para crear soluciones protésicas avanzadas y contenido educativo de alto impacto.
+                    </p>
+                    <a href="#servicios" class="inline-block bg-[#0077B6] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[#0096C7] transition duration-300 transform hover:scale-105">
+                        Explora Nuestros Servicios
+                    </a>
+                </div>
+                <div class="lg:w-1/2 flex justify-center">
+                    <!-- Placeholder para la prótesis estilizada con líneas electrónicas -->
+                    <div class="w-full max-w-sm h-64 md:h-80 bg-gray-100 rounded-2xl shadow-inner flex items-center justify-center border-4 border-[#00B4D8] border-dashed">
+                         <p class="text-center text-gray-500 p-4">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección "¿Qué es BiomedZone?" -->
+            <div id="que-es-biomedzone" class="mt-20 text-center">
+                <h3 class="text-3xl font-bold text-gray-800 mb-4">¿Qué es BiomedZone?</h3>
+                <p class="max-w-3xl mx-auto text-lg text-gray-600">
+                    Somos la plataforma líder dedicada a la innovación en tecnología biomédica. Combinamos la ingeniería de precisión con la bioelectrónica avanzada para informar, educar y apoyar a la próxima generación de profesionales y al público interesado en la tecnología médica accesible.
+                </p>
+            </div>
+
+            <!-- Servicios Destacados (Mini-cards) -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-[#0077B6] hover:shadow-2xl transition duration-300">
+                    <p class="text-3xl mb-4 text-[#0077B6]">&#129505;</p> <!-- Icono de Corazón Tecnológico -->
+                    <h4 class="font-semibold text-lg mb-2">Diseño Protésico</h4>
+                    <p class="text-sm text-gray-500">Soluciones de prótesis funcionales y estéticas basadas en tecnología de vanguardia.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-[#00B4D8] hover:shadow-2xl transition duration-300">
+                    <p class="text-3xl mb-4 text-[#00B4D8]">&#128218;</p> <!-- Icono de Libro/Aprendizaje -->
+                    <h4 class="font-semibold text-lg mb-2">Contenido Educativo</h4>
+                    <p class="text-sm text-gray-500">Artículos y tutoriales profundos sobre bioelectrónica, nervios y membranas.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-gray-400 hover:shadow-2xl transition duration-300">
+                    <p class="text-3xl mb-4 text-gray-500">&#128187;</p> <!-- Icono de Computadora -->
+                    <h4 class="font-semibold text-lg mb-2">Asesorías Técnicas</h4>
+                    <p class="text-sm text-gray-500">Soporte y guía para proyectos de ingeniería biomédica y desarrollo de hardware.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-[#0077B6] hover:shadow-2xl transition duration-300">
+                    <p class="text-3xl mb-4 text-[#0077B6]">&#128640;</p> <!-- Icono de Cohete/Futuro -->
+                    <h4 class="font-semibold text-lg mb-2">Innovación Constante</h4>
+                    <p class="text-sm text-gray-500">Siempre a la vanguardia con los últimos avances en biotecnología médica.</p>
+                </div>
+            </div>
+
+            <!-- Artículos Recientes del Blog (Mockup) -->
+            <div class="mt-20">
+                <h3 class="text-3xl font-bold text-center text-gray-800 mb-10">Explora Nuestros Artículos Recientes</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Artículo 1 -->
+                    <article class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
+                        <img src="https://placehold.co/600x400/0077B6/ffffff?text=Bioelectrónica" alt="Artículo sobre Bioelectrónica" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm font-semibold text-[#00B4D8] uppercase">Bioelectrónica</span>
+                            <h4 class="text-xl font-bold mt-2 mb-3 text-gray-800">Interfaces Neuronal-Máquina: El Futuro del Control Protésico</h4>
+                            <a href="#blog" class="text-[#0077B6] font-semibold hover:text-[#00B4D8]">Leer más &rarr;</a>
+                        </div>
+                    </article>
+                    <!-- Artículo 2 -->
+                    <article class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
+                        <img src="https://placehold.co/600x400/00B4D8/ffffff?text=Ingeniería" alt="Artículo sobre Ingeniería Biomédica" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm font-semibold text-gray-500 uppercase">Ingeniería Biomédica</span>
+                            <h4 class="text-xl font-bold mt-2 mb-3 text-gray-800">Modelado 3D: Reduciendo Costos y Mejorando la Accesibilidad</h4>
+                            <a href="#blog" class="text-[#0077B6] font-semibold hover:text-[#00B4D8]">Leer más &rarr;</a>
+                        </div>
+                    </article>
+                    <!-- Artículo 3 -->
+                    <article class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
+                        <img src="https://placehold.co/600x400/2A9D8F/ffffff?text=Membranas" alt="Artículo sobre Membranas" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm font-semibold text-[#0077B6] uppercase">Membranas</span>
+                            <h4 class="text-xl font-bold mt-2 mb-3 text-gray-800">El Rol de las Membranas Biológicas en la Batería del Cuerpo</h4>
+                            <a href="#blog" class="text-[#0077B6] font-semibold hover:text-[#00B4D8]">Leer más &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Testimonios (Mockup) -->
+            <div class="mt-20 electronic-grid-bg p-8 md:p-12 rounded-3xl">
+                <h3 class="text-3xl font-bold text-center text-gray-800 mb-10">Lo que Dicen Nuestros Usuarios</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-[#00B4D8]">
+                        <p class="text-lg italic text-gray-700">"Las asesorías técnicas de BiomedZone fueron cruciales para mi proyecto de tesis. La claridad y el detalle en la bioelectrónica son inigualables."</p>
+                        <p class="mt-4 font-semibold text-gray-800">- Dr. Javier Rojas, Ingeniero Biomédico.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-[#0077B6]">
+                        <p class="text-lg italic text-gray-700">"Su contenido educativo me ayudó a entender por fin cómo funcionan las interfaces musculares en las prótesis mioeléctricas. ¡Una fuente confiable!"</p>
+                        <p class="mt-4 font-semibold text-gray-800">- Sofía Castro, Estudiante de Ingeniería.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        
+        <!-- 3. SOBRE NOSOTROS -->
+        <section id="sobre-nosotros" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-16">BiomedZone: Nuestra Historia y Enfoque</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Historia -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#0077B6] mb-4">Historia del Proyecto</h3>
+                        <p class="text-gray-600 mb-6">
+                            BiomedZone nació de la necesidad de cerrar la brecha entre la alta tecnología protésica y su accesibilidad. Iniciamos como un pequeño grupo de ingenieros y científicos apasionados por la bioelectrónica, buscando democratizar el conocimiento y el diseño de dispositivos médicos funcionales. Desde 2020, hemos crecido hasta convertirnos en una plataforma de referencia.
+                        </p>
+                        <div class="h-64 rounded-xl electronic-grid-bg border-2 border-[#00B4D8] flex items-center justify-center">
+                            <p class="text-gray-500"></p>
+                        </div>
+                    </div>
+
+                    <!-- Misión, Visión, Valores -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#0077B6] mb-4">Misión, Visión y Valores</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="p-3 bg-biomed-gradient rounded-full text-white flex-shrink-0">
+                                    &#10003;
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Misión:</h4>
+                                    <p class="text-gray-600">Ser el puente entre la investigación biomédica y la aplicación práctica, enfocados en prótesis accesibles.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="p-3 bg-biomed-gradient rounded-full text-white flex-shrink-0">
+                                    &#10003;
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Visión:</h4>
+                                    <p class="text-gray-600">Liderar la divulgación científica y el desarrollo de bioelectrónica, impactando positivamente la calidad de vida global.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="p-3 bg-biomed-gradient rounded-full text-white flex-shrink-0">
+                                    &#10003;
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Valores:</h4>
+                                    <p class="text-gray-600">Innovación, Accesibilidad, Rigor Científico y Colaboración.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Áreas de Especialización -->
+                <div class="mt-16 text-center">
+                    <h3 class="text-2xl font-bold text-[#0077B6] mb-8">Nuestras Áreas de Especialización</h3>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="px-4 py-2 bg-[#E1F5FE] text-[#0077B6] font-medium rounded-full shadow-md">Ingeniería Biomédica Avanzada</span>
+                        <span class="px-4 py-2 bg-[#E0F7FA] text-[#00B4D8] font-medium rounded-full shadow-md">Diseño de Prótesis 3D</span>
+                        <span class="px-4 py-2 bg-[#E3F2FD] text-[#0077B6] font-medium rounded-full shadow-md">Bioelectrónica y Sistemas de Control</span>
+                        <span class="px-4 py-2 bg-[#F1F8E9] text-gray-600 font-medium rounded-full shadow-md">Análisis de Nervios y Músculos</span>
+                        <span class="px-4 py-2 bg-[#FCE4EC] text-gray-600 font-medium rounded-full shadow-md">Divulgación Científica de Alto Nivel</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. SERVICIOS -->
+        <section id="servicios" class="py-20 bg-f7f9fc electronic-grid-bg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-6">Nuestros Servicios Tecnológicos</h2>
+                <p class="text-center text-xl text-gray-600 mb-16 max-w-4xl mx-auto">Soluciones especializadas para llevar tu proyecto o tu conocimiento al siguiente nivel en el sector biomédico.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Servicio 1: Diseño de Prótesis -->
+                    <div class="bg-white p-6 rounded-2xl shadow-2xl hover:shadow-3xl transition duration-300 transform hover:-translate-y-1 border-t-8 border-[#0077B6]">
+                        <p class="text-5xl mb-4 text-[#0077B6]">&#9881;</p> <!-- Icono de Engranaje/Diseño -->
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Diseño de Prótesis Personalizado</h3>
+                        <p class="text-gray-600">Diseño paramétrico y modelado 3D de prótesis funcionales (mioeléctricas, pasivas), optimizando materiales y mecánica.</p>
+                        <a href="#contacto" class="block mt-4 text-[#0077B6] font-semibold hover:text-[#00B4D8]">Ver Detalles &rarr;</a>
+                    </div>
+
+                    <!-- Servicio 2: Asesorías Biomédicas -->
+                    <div class="bg-white p-6 rounded-2xl shadow-2xl hover:shadow-3xl transition duration-300 transform hover:-translate-y-1 border-t-8 border-[#00B4D8]">
+                        <p class="text-5xl mb-4 text-[#00B4D8]">&#128172;</p> <!-- Icono de Chat/Asesoría -->
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Asesorías Técnicas y Regulatorias</h3>
+                        <p class="text-gray-600">Guía experta en bioelectrónica, selección de sensores (EMG), análisis de señales y cumplimiento de normas médicas.</p>
+                        <a href="#contacto" class="block mt-4 text-[#0077B6] font-semibold hover:text-[#00B4D8]">Ver Detalles &rarr;</a>
+                    </div>
+
+                    <!-- Servicio 3: Contenido Técnico -->
+                    <div class="bg-white p-6 rounded-2xl shadow-2xl hover:shadow-3xl transition duration-300 transform hover:-translate-y-1 border-t-8 border-gray-400">
+                        <p class="text-5xl mb-4 text-gray-500">&#128220;</p> <!-- Icono de Documento/Contenido -->
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Creación de Contenido Técnico</h3>
+                        <p class="text-gray-600">Elaboración de manuales, artículos especializados, papers, o material didáctico para universidades y empresas.</p>
+                        <a href="#contacto" class="block mt-4 text-[#0077B6] font-semibold hover:text-[#00B4D8]">Ver Detalles &rarr;</a>
+                    </div>
+
+                    <!-- Servicio 4: Proyectos Especiales -->
+                    <div class="bg-white p-6 rounded-2xl shadow-2xl hover:shadow-3xl transition duration-300 transform hover:-translate-y-1 border-t-8 border-[#0077B6]">
+                        <p class="text-5xl mb-4 text-[#0077B6]">&#128640;</p> <!-- Icono de Cohete/Investigación -->
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Investigación y Proyectos Especiales</h3>
+                        <p class="text-gray-600">Colaboración en I+D para el desarrollo de nuevos materiales, biointerfaces avanzadas o dispositivos únicos.</p>
+                        <a href="#contacto" class="block mt-4 text-[#0077B6] font-semibold hover:text-[#00B4D8]">Ver Detalles &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. BLOG -->
+        <section id="blog" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-6">Blog: Divulgación Científica y Tecnología</h2>
+                <p class="text-center text-xl text-gray-600 mb-12">Artículos detallados y confiables sobre el vasto mundo de la tecnología médica.</p>
+
+                <!-- Categorías -->
+                <div class="flex flex-wrap justify-center gap-3 mb-10">
+                    <span class="px-3 py-1 bg-[#0077B6] text-white text-sm font-medium rounded-full cursor-pointer hover:bg-[#0096C7]">Todas</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded-full cursor-pointer hover:bg-gray-200">Prótesis</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded-full cursor-pointer hover:bg-gray-200">Bioelectrónica</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded-full cursor-pointer hover:bg-gray-200">Ingeniería Biomédica</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded-full cursor-pointer hover:bg-gray-200">Nervios y Músculos</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded-full cursor-pointer hover:bg-gray-200">Membranas</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded-full cursor-pointer hover:bg-gray-200">Innovación Médica</span>
+                </div>
+
+                <!-- Lista de Artículos (Mockup) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Artículo Ejemplo 1 -->
+                    <article class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300">
+                        <img src="https://placehold.co/600x300/0077B6/ffffff?text=Prótesis+Mioeléctrica" onerror="this.onerror=null;this.src='https://placehold.co/600x300/0077B6/ffffff?text=Prótesis';" alt="Artículo sobre Prótesis" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <span class="text-xs font-semibold text-[#00B4D8] uppercase">Prótesis</span>
+                            <h4 class="text-xl font-bold mt-1 mb-2 text-gray-800">El Camino hacia la Sensibilidad en Prótesis Avanzadas</h4>
+                            <p class="text-gray-600 text-sm">Exploramos cómo la retroalimentación sensorial está transformando la interacción con la prótesis.</p>
+                            <a href="#" class="mt-3 inline-block text-[#0077B6] font-semibold hover:text-[#00B4D8]">Leer artículo &rarr;</a>
+                        </div>
+                    </article>
+                    <!-- Artículo Ejemplo 2 -->
+                    <article class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300">
+                        <img src="https://placehold.co/600x300/00B4D8/ffffff?text=Nervio+y+Músculo" onerror="this.onerror=null;this.src='https://placehold.co/600x300/00B4D8/ffffff?text=Nervio';" alt="Artículo sobre Nervios y Músculos" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <span class="text-xs font-semibold text-gray-500 uppercase">Nervios y Músculos</span>
+                            <h4 class="text-xl font-bold mt-1 mb-2 text-gray-800">Potenciales de Acción: La Señal de Control de la Bioelectrónica</h4>
+                            <p class="text-gray-600 text-sm">Un análisis del funcionamiento muscular y cómo se interpretan sus señales eléctricas.</p>
+                            <a href="#" class="mt-3 inline-block text-[#0077B6] font-semibold hover:text-[#00B4D8]">Leer artículo &rarr;</a>
+                        </div>
+                    </article>
+                    <!-- Artículo Ejemplo 3 -->
+                    <article class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300">
+                        <img src="https://placehold.co/600x300/2A9D8F/ffffff?text=Innovación" onerror="this.onerror=null;this.src='https://placehold.co/600x300/2A9D8F/ffffff?text=Innovación';" alt="Artículo sobre Innovación" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <span class="text-xs font-semibold text-[#0077B6] uppercase">Innovación Médica</span>
+                            <h4 class="text-xl font-bold mt-1 mb-2 text-gray-800">Biotecnología y Ética: Los Límites del Diseño Humano</h4>
+                            <p class="text-gray-600 text-sm">Discusión sobre las implicaciones éticas y sociales de los avances en biotecnología.</p>
+                            <a href="#" class="mt-3 inline-block text-[#0077B6] font-semibold hover:text-[#00B4D8]">Leer artículo &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. GALERÍA / CASOS -->
+        <section id="galeria" class="py-20 bg-f7f9fc electronic-grid-bg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-6">Galería de Proyectos y Casos de Éxito</h2>
+                <p class="text-center text-xl text-gray-600 mb-12 max-w-4xl mx-auto">Visualiza nuestros renders de diseño, diagramas conceptuales y avances de investigación.</p>
+
+                <!-- Grid de Galería (Mockup) -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 rounded-xl overflow-hidden shadow-2xl">
+                    <div class="h-48 md:h-64 bg-gray-200 flex items-center justify-center relative group">
+                        <img src="https://placehold.co/600x600/0077B6/ffffff?text=Prótesis+Robótica" alt="Prótesis Robótica" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <p class="text-white text-sm font-semibold p-2 rounded-lg bg-black bg-opacity-50">Prótesis Mioeléctrica: Detalle</p>
+                        </div>
+                    </div>
+                    <div class="h-48 md:h-64 bg-gray-200 flex items-center justify-center relative group">
+                        <img src="https://placehold.co/600x600/00B4D8/ffffff?text=Render+3D" alt="Render 3D" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <p class="text-white text-sm font-semibold p-2 rounded-lg bg-black bg-opacity-50">Render 3D: Diseño Estructural</p>
+                        </div>
+                    </div>
+                    <div class="h-48 md:h-64 bg-gray-200 flex items-center justify-center relative group">
+                        <img src="https://placehold.co/600x600/2A9D8F/ffffff?text=Diagrama+Circuitos" alt="Diagrama Circuitos" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <p class="text-white text-sm font-semibold p-2 rounded-lg bg-black bg-opacity-50">Diagrama: Bioelectrónica de Control</p>
+                        </div>
+                    </div>
+                    <div class="h-48 md:h-64 bg-gray-200 flex items-center justify-center relative group">
+                        <img src="https://placehold.co/600x600/0077B6/ffffff?text=Avance+Proyecto" alt="Avance Proyecto" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <p class="text-white text-sm font-semibold p-2 rounded-lg bg-black bg-opacity-50">Prototipo Beta: Pruebas de Movimiento</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to action para la tienda futura -->
+                <div class="mt-16 text-center bg-biomed-gradient p-8 rounded-2xl shadow-xl">
+                    <h3 class="text-2xl font-bold text-white mb-3">Próximamente: Tienda BiomedZone</h3>
+                    <p class="text-white mb-4">Prepárate para adquirir nuestros modelos 3D, plantillas de diseño y posters educativos exclusivos.</p>
+                    <button class="bg-white text-[#0077B6] font-bold py-2 px-6 rounded-full hover:bg-gray-100 transition duration-300">
+                        Regístrate para Recibir Novedades
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CONTACTO -->
+        <section id="contacto" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-6">Contáctanos</h2>
+                <p class="text-center text-xl text-gray-600 mb-12 max-w-4xl mx-auto">Comencemos a trabajar en tu proyecto o aclara tus dudas con nuestros expertos.</p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <!-- Información de Contacto -->
+                    <div class="lg:col-span-1 space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <svg class="w-8 h-8 text-[#0077B6] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 4v7a2 2 0 01-2 2H7a2 2 0 01-2-2v-7"></path></svg>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Correo Electrónico</h4>
+                                <p class="text-gray-600">info@biomedzone.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <svg class="w-8 h-8 text-[#0077B6] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h7m0 0v7m0-7L10 14"></path></svg>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Redes Sociales</h4>
+                                <div class="flex space-x-3 mt-1">
+                                    <a href="#" class="text-gray-500 hover:text-[#0077B6] transition duration-300">&#xf09a;</a> <!-- Icono de Facebook -->
+                                    <a href="#" class="text-gray-500 hover:text-[#00B4D8] transition duration-300">&#xf099;</a> <!-- Icono de Twitter -->
+                                    <a href="#" class="text-gray-500 hover:text-red-600 transition duration-300">&#xf167;</a> <!-- Icono de YouTube -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <svg class="w-8 h-8 text-green-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12c0 2.373.805 4.54 2.15 6.29L3 21l3.71-1.15C7.99 20.373 9.9 21 12 21c5.523 0 10-4.477 10-10S17.523 2 12 2zm3.36 14.59c-.066-.118-.328-.18-.687-.354-.359-.174-2.13-.935-2.46-1.054-.33-.118-.57-.177-.81.118-.24.295-.935 1.054-1.146 1.285-.211.23-.422.253-.781.096-.359-.158-1.493-.548-2.846-1.751-1.054-.935-1.769-2.096-1.979-2.449-.21-.353-.021-.545.177-.737.16-.16.359-.395.485-.594.126-.199.168-.353.253-.518.084-.165.042-.303-.021-.422-.063-.119-.57-.177-1.464-.407-.894-.23-1.036-.211-1.464-.518-.428-.307-.735-.781-.975-1.065-.24-.284-.063-.538.118-.737.16-.177.687-.736 1.002-1.09.315-.353.422-.295.633-.295.211 0 .328-.021.518-.021s.359-.063.549.407c.19.47.781 1.896.781 1.956s.126.063.211.021c.084-.042.894-.353 1.09-.422.196-.069.45-.119.704-.096.255.023.485.158.625.357.14.199.042.422-.084.54l-.57.594c-.126.126-.233.253-.118.444.118.19.646 1.054 1.405 1.34s1.956.704 2.228.84c.272.135.422.112.518.042.096-.069.625-.253 1.054-.518.429-.265.69-.177.93-.084.24.093.158.518-.084.975z"/></svg>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">WhatsApp Directo</h4>
+                                <a href="https://wa.me/XXXXXXXXXX" target="_blank" class="text-green-600 hover:text-green-700 transition duration-300 font-medium">Envía un mensaje</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de Contacto -->
+                    <div class="lg:col-span-2 p-8 bg-f7f9fc rounded-2xl shadow-xl">
+                        <form action="#" method="POST" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Nombre Completo</label>
+                                <input type="text" id="name" name="name" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:ring-[#00B4D8] focus:border-[#00B4D8]">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
+                                <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:ring-[#00B4D8] focus:border-[#00B4D8]">
+                            </div>
+                            <div>
+                                <label for="service" class="block text-sm font-medium text-gray-700">Servicio de Interés</label>
+                                <select id="service" name="service" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:ring-[#00B4D8] focus:border-[#00B4D8]">
+                                    <option>Diseño de Prótesis</option>
+                                    <option>Asesoría Biomédica</option>
+                                    <option>Contenido Técnico</option>
+                                    <option>Consulta General</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Mensaje / Detalle de la Consulta</label>
+                                <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:ring-[#00B4D8] focus:border-[#00B4D8]"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-biomed-gradient text-white font-bold py-3 px-4 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                                Enviar Consulta
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Mapa Placeholder -->
+                <div class="mt-16 bg-gray-100 h-64 rounded-2xl shadow-inner flex items-center justify-center">
+                    <p class="text-gray-500">Placeholder para Mapa de Ubicación (si aplica)</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 8. FOOTER (Pie de Página) -->
+    <footer id="footer" class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8 mb-8">
+                <!-- Logo y Slogan -->
+                <div class="col-span-2 md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <svg class="w-8 h-8 text-[#00B4D8]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1v-3.25m-7.25 0a3 3 0 01-3-3V7a3 3 0 013-3h10a3 3 0 013 3v6a3 3 0 01-3 3H9.75z" />
+                        </svg>
+                        <h4 class="text-xl font-extrabold text-white">Biomed<span class="text-[#00B4D8]">Zone</span></h4>
+                    </div>
+                    <p class="text-sm text-gray-400">Diseñando la tecnología del mañana.</p>
+                </div>
+
+                <!-- Navegación Secundaria -->
+                <div>
+                    <h5 class="font-semibold text-[#00B4D8] mb-3">Mapa del Sitio</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#inicio" class="hover:text-white transition duration-200">Inicio</a></li>
+                        <li><a href="#sobre-nosotros" class="hover:text-white transition duration-200">Sobre Nosotros</a></li>
+                        <li><a href="#servicios" class="hover:text-white transition duration-200">Servicios</a></li>
+                        <li><a href="#blog" class="hover:text-white transition duration-200">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h5 class="font-semibold text-[#00B4D8] mb-3">Legal</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition duration-200">Aviso de Privacidad</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-200">Términos y Condiciones</a></li>
+                        <li><a href="#contacto" class="hover:text-white transition duration-200">Soporte</a></li>
+                    </ul>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div>
+                    <h5 class="font-semibold text-[#00B4D8] mb-3">Síguenos</h5>
+                    <div class="flex space-x-4 text-2xl">
+                        <a href="#" class="text-gray-400 hover:text-[#0077B6] transition duration-300">&#xf09a;</a>
+                        <a href="#" class="text-gray-400 hover:text-[#00B4D8] transition duration-300">&#xf099;</a>
+                        <a href="#" class="text-gray-400 hover:text-red-600 transition duration-300">&#xf167;</a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300">&#xf0e1;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Derechos de Autor -->
+            <div class="text-center text-sm text-gray-500">
+                &copy; 2025 BiomedZone. Todos los derechos reservados. Plataforma de Ingeniería Biomédica.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript para la navegación suave y menú móvil -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // 1. Alternar Menú Móvil
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // 2. Navegación Suave (Scroll a la sección)
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    // Si estamos en móvil, ocultamos el menú después de hacer clic
+                    if (!mobileMenu.classList.contains('hidden')) {
+                         mobileMenu.classList.add('hidden');
+                    }
+
+                    if (targetElement) {
+                        // Desplazamiento suave hacia la sección
+                        window.scrollTo({
+                            top: targetElement.offsetTop - document.getElementById('header').offsetHeight, // Ajuste por el encabezado fijo
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // 3. Simulación de carga de iconos para Redes Sociales
+            // Nota: En un entorno real, se usaría una biblioteca como FontAwesome.
+            // Aquí usamos códigos Unicode para simular la presencia de iconos populares.
+            const socialIcons = {
+                '&#xf09a;': 'Facebook', // Unicode de Font Awesome para Facebook F
+                '&#xf099;': 'Twitter',  // Unicode de Font Awesome para Twitter
+                '&#xf167;': 'YouTube',  // Unicode de Font Awesome para YouTube
+                '&#xf0e1;': 'LinkedIn'  // Unicode de Font Awesome para LinkedIn
+            };
+
+            document.querySelectorAll('a[href="#"]').forEach(anchor => {
+                const innerHTML = anchor.innerHTML.trim();
+                if (socialIcons[innerHTML]) {
+                    anchor.style.fontFamily = 'Arial, sans-serif'; // Fallback visual
+                }
+            });
+        });
+    </script>
+</body>
+</html>
